@@ -4,6 +4,7 @@ import 'package:tasks/core/utils/app_text_style.dart';
 import 'package:tasks/core/widget/csutom_elevated_button.dart';
 import 'package:tasks/core/widget/csutom_form_field.dart';
 import 'package:tasks/core/widget/form_error.dart';
+import 'package:tasks/feature/auth/otp/presentation/view/otp_screen.dart';
 
 
 
@@ -65,7 +66,9 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
 CustomElevatedButton(
   height: 50.h,
   onPressed: () {
-     
+     Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return OtpScreen();
+              }));
   },
   text: 'Continue'),
          

@@ -5,6 +5,7 @@ import 'package:tasks/core/utils/app_text_style.dart';
 import 'package:tasks/core/widget/custpm_have_an_account.dart';
 import 'package:tasks/core/widget/social_card.dart';
 import 'package:tasks/feature/auth/signin/presentation/view/signin_view.dart';
+import 'package:tasks/feature/auth/signup/presentation/widget/sign_up_form.dart';
 
 
 
@@ -38,7 +39,7 @@ class SignUpScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       const SizedBox(height: 10),
-                    
+                    const SignUpForm(),
                       SizedBox(height: 20.h),
                       const Align(
                           alignment: Alignment.center,

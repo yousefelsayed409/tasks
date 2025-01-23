@@ -1,32 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:tasks/core/routes/app_route.dart';
 
 void main() {
-  runApp(Task());
+  runApp(const Task());
 }
 
 class Task extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(),
-    );
-  }
-}
+  const Task({super.key});
 
-class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Flutter Demo Home Page'),
-      ),
-      body: Center(
-        child: Text('Hello, world!'),
-      ),
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (BuildContext context, Widget? child) {
+        return  const MaterialApp(
+          debugShowCheckedModeBanner: false,
+          initialRoute: AppRoute.signInScreen,
+          onGenerateRoute: AppRoute.generateRoute,
+        );
+      },
     );
+
+    
   }
 }

@@ -6,7 +6,6 @@ import 'package:tasks/core/widget/csutom_form_field.dart';
 import 'package:tasks/core/widget/data_of_birth_form_field.dart';
 import 'package:tasks/core/widget/form_error.dart';
 import 'package:tasks/core/widget/phone_number_form_field.dart';
-import 'package:tasks/core/widget/social_card.dart';
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({super.key});

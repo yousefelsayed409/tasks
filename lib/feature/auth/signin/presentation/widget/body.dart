@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tasks/core/utils/app_text_style.dart';
-
+import 'package:tasks/core/widget/custpm_have_an_account.dart';
+import 'package:tasks/core/widget/social_card.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -45,7 +46,26 @@ class Body extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SocalCard(
+                        imageAseetss: Image.asset('assets/Icons/facebook.png'),
+                        press: () {},
+                      ),
+                      SocalCard(
+                        imageAseetss: Image.asset('assets/Icons/google.png'),
+                        press: () {},
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 10.h),
+                  CustomHaveAnAcountWidget(
+                      onTap: () {
+                        
+                      },
+                      title: 'Don’t have an account ?',
+                      To: ' SignUp'),
                 ],
               ),
             ),

@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tasks/core/utils/app_text_style.dart';
 import 'package:tasks/core/widget/custpm_have_an_account.dart';
 import 'package:tasks/core/widget/social_card.dart';
+import 'package:tasks/feature/auth/signup/presentation/view/sign_up_view.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -62,7 +63,14 @@ class Body extends StatelessWidget {
                   SizedBox(height: 10.h),
                   CustomHaveAnAcountWidget(
                       onTap: () {
-                        
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return const SignUpScreen();
+                            },
+                          ),
+                        );
                       },
                       title: 'Don’t have an account ?',
                       To: ' SignUp'),
